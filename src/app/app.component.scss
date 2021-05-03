@@ -1,0 +1,347 @@
+.toolbar {
+  background-color: #fff;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar .title {
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #02a373;
+  padding: 0rem 1rem 0rem 4.5rem;
+}
+
+.toolbar .right-side-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.right-side-content .stock-info {
+  display: flex;
+  justify-content: space-around;
+  padding-right: 1rem;
+}
+
+.right-side-content .stock-info .stock-name h2 {
+  font-weight: 700;
+  margin: 0.4rem 1rem 0 0;
+  color: #0994d4;
+}
+
+.right-side-content .stock-info .stock-value {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.5rem;
+}
+
+.right-side-content .stock-info .stock-value p {
+  font-weight: 600;
+  padding-top: 0.15rem;
+}
+
+.right-side-content .stock-info .stock-value .end-of-day-info h3 {
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-left: 0.15rem;
+}
+
+.right-side-content .stock-info .stock-value .end-of-day-info p {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #969292;
+  margin-top: -0.2rem;
+}
+
+.right-side-content .stock-info .stock-percent-change {
+  text-align: center;
+}
+
+.right-side-content .stock-info .stock-percent-change .percent-change-image {
+  height: 1.35rem;
+  margin-top: 0.35rem;
+}
+
+.right-side-content .stock-info .stock-percent-change p {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding-top: 0.35rem;
+}
+
+.right-side-content .search-form {
+  min-width: 18.75rem;
+  max-width: 31.25rem;
+}
+
+.right-side-content .search-form .search {
+  width: 100%;
+}
+
+.content {
+  margin-top: 1.875rem;
+}
+
+.body-title h5 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #969292;
+}
+
+.graph-card,
+.stock-info-card,
+.historical-data-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stock-info-card .title h1 {
+  color: #22a8ee;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.stock-info-card .subtitle h3 {
+  color: #969292;
+  margin-top: 0.75rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.stock-info-card .stock-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stock-info-card .stock-data .stock-info {
+  display: flex;
+  padding-right: 1rem;
+}
+
+.stock-info-card .stock-data .stock-info .stock-value {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.5rem;
+}
+
+.stock-info-card .stock-data .stock-info .stock-value p {
+  font-weight: 600;
+  padding-top: 0.15rem;
+}
+
+.stock-info-card .stock-data .stock-info .stock-value h3 {
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-left: 0.15rem;
+}
+
+.stock-info-card .stock-data .stock-info .stock-percent-change {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stock-info-card
+  .stock-data
+  .stock-info
+  .stock-percent-change
+  .percent-change-image {
+  height: 1.15rem;
+  margin-top: 0.45rem;
+}
+
+.stock-info-card .stock-data .stock-info .stock-percent-change p {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding-top: 0.45rem;
+  padding-left: 0.3rem;
+}
+
+.stock-info-card .stock-data .date h3 {
+  color: #ff5c00;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.stock-info-card .stock-info-content-container {
+  margin-top: 1.5rem;
+}
+
+.stock-info-card .stock-info-content-container .stock-info-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stock-info-content .content-title h5 {
+  color: #969292;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.stock-info-content .content-value {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stock-info-content .content-value p {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.stock-info-content .content-value h5 {
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-left: 0.15rem;
+  font-size: 1.15rem;
+}
+
+.stock-info-content .content-value-trade-period-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stock-info-content .content-value-trade-period-item .content-value-subtitle p {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #969292;
+  margin: 0.15rem 0.25rem 0 0;
+}
+
+.stock-info-content .content-value-volume h5 {
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+  font-size: 1.15rem;
+}
+
+.stock-info-content .content-value-percent h5 {
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+  font-size: 1.15rem;
+}
+
+.stock-info-card .stock-info-content-container hr {
+  margin-top: 0rem;
+}
+
+.historical-data-card .title h1 {
+  color: #22a8ee;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.historical-data-card .past-values {
+  margin-top: 1rem;
+}
+
+.historical-data-card .past-values .info {
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-bottom: solid 0.000625rem grey;
+  border-radius: 0.15rem;
+
+  cursor: pointer;
+
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.historical-data-card .past-values .info:hover {
+  background: #8080801a radial-gradient(circle, transparent 1%, #8080801a 1%)
+    center/15000%;
+}
+
+.historical-data-card .past-values .info:active {
+  background-color: #8080801a;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/*Older CSS*/
+
+.content .displayInfo {
+  height: 31.25rem;
+  width: 43.75rem;
+  padding: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.content .displayInfo .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .displayInfo .title .mat-display-3 {
+  margin-bottom: 0;
+  color: #0994d4;
+}
+
+.content .displayInfo .title .mat-display-1 {
+  margin-bottom: 0;
+  color: #5d5b5b;
+}
+
+.content .displayInfo .subtitle.mat-display-1 {
+  text-align: center;
+  margin-bottom: 0;
+  color: #5d5b5b;
+}
+
+.content .displayInfo .content-body {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+
+.content .displayInfo .content-body .content-text {
+  font-size: 1.125rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content .sideMenu {
+  height: 31.25rem;
+  width: 31.25rem;
+}
+
+.content .sideMenu .title .mat-display-1 {
+  color: #5d5b5b;
+  margin-bottom: 0.625rem;
+  text-align: center;
+}
+
+.content .sideMenu .values {
+  height: 43.75rem;
+  overflow: auto;
+}
+
+.content .sideMenu .values .info {
+  overflow: auto;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1.25rem;
+  border-bottom: solid 0.000625rem grey;
+
+  cursor: pointer;
+
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.content .sideMenu .values .info:hover {
+  background: #8080801a radial-gradient(circle, transparent 1%, #8080801a 1%)
+    center/15000%;
+}
+
+.content .sideMenu .values .info:active {
+  background-color: #8080801a;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.content .sideMenu .values .info .title {
+  color: #0994d4;
+}

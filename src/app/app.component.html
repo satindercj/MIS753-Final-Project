@@ -22,7 +22,7 @@
     </div>
     <div class="search">
       <form class="search-form">
-        <mat-form-field class="search">
+        <mat-form-field class="search-form-field">
           <mat-label>Search Stock or Company</mat-label>
           <input
             type="text"
@@ -57,7 +57,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-6">
       <div class="graph-card">
         <apx-chart
           [series]="series"
@@ -73,7 +73,8 @@
         ></apx-chart>
       </div>
     </div>
-    <div class="col">
+
+    <div class="col-6">
       <div class="stock-info-card">
         <div class="title">
           <h1>
@@ -169,39 +170,62 @@
       </div>
     </div>
 
-    <div class="col-10">
+    <div class="col">
       <div class="historical-data-card">
         <div class="title">
           <h1>
             Historical Data
           </h1>
         </div>
+        <div class="subtitle">
+          <h3>
+            Last 10 Days
+          </h3>
+        </div>
         <div class="past-values">
-          <div
-            class="info"
-            *ngFor="let historicalDay of sideMenuData"
-            (click)="updateInfo(historicalDay)"
-          >
-            <mat-card-title class="title">
-              {{ historicalDay.date }}
-            </mat-card-title>
-            <mat-card-content>
-              <p>
-                <i>Closing Price</i>
-                :
-                <b>${{ historicalDay.close | number: '1.2-2' }}</b>
-              </p>
-              <p>
-                <i>Volume</i>
-                :
-                <b>{{ historicalDay.volume | number: '1.0-0' }}</b>
-              </p>
-              <p>
-                <i>Percent Change</i>
-                :
-                <b>{{ historicalDay.percentChange | number: '1.3-3' }}%</b>
-              </p>
-            </mat-card-content>
+          <div class="row justify-content-center">
+            <div
+              class="past-values-container col-5"
+              *ngFor="let historicalDay of sideMenuData"
+              (click)="updateInfo(historicalDay)"
+            >
+              <div class="title">
+                <h3>{{ historicalDay.date | date:'EE, MMM d' }}</h3>
+              </div>
+
+              <div class="past-value-body">
+                <div class="past-value-item">
+                  <p class="subtitle">
+                    Closing Price:
+                  </p>
+                  <p class="value">
+                    ${{ historicalDay.close | number: '1.2-2' }}
+                  </p>
+                </div>
+                <div class="past-value-item">
+                  <p class="subtitle">
+                    Volume:
+                  </p>
+                  <p class="value">
+                    {{ historicalDay.volume | number: '1.0-0' }}
+                  </p>
+                </div>
+                <div class="past-value-item">
+                  <p class="subtitle">
+                    Percent Change:
+                  </p>
+                  <div class="value-percentage">
+                    <img
+                      src="{{historicalDay.percentChangeImage}}"
+                      class="percent-change-image"
+                    />
+                    <p [style.color]="historicalDay.percentColor">
+                      {{ historicalDay.percentChange | number: '1.2-2' }}%
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

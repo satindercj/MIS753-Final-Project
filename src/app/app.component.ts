@@ -994,13 +994,16 @@ export class AppComponent {
       {
         name: this.metaData["2. Symbol"],
         data: dates,
+        color: "#8f83ff",
       },
     ];
 
     this.chart = {
       type: "area",
       stacked: false,
-      height: 350,
+      foreColor: "#969292",
+      height: "auto",
+
       zoom: {
         type: "x",
         enabled: true,
@@ -1015,10 +1018,16 @@ export class AppComponent {
     };
     this.markers = {
       size: 0,
+      colors: ["#22a8ee"],
     };
     this.title = {
       text: "Stock Price Movement",
       align: "left",
+      style: {
+        fontSize: "20",
+        fontWeight: 700,
+        color: "#22a8ee",
+      },
     };
     this.fill = {
       type: "gradient",
@@ -1032,12 +1041,9 @@ export class AppComponent {
     };
     this.yaxis = {
       labels: {
-        formatter: function (val) {
-          return val.toString();
+        formatter: function (val, index) {
+          return "$" + val.toFixed(2);
         },
-      },
-      title: {
-        text: "Price",
       },
     };
     this.xaxis = {
@@ -1047,7 +1053,7 @@ export class AppComponent {
       shared: false,
       y: {
         formatter: function (val) {
-          return val.toString();
+          return "$" + val.toFixed(2);
         },
       },
     };
@@ -1068,6 +1074,7 @@ export class AppComponent {
 
   async getSearchData(searchEvent) {
     let keyVal = searchEvent.split("(").pop().split(")")[0];
+
     this.ngxService.start();
     await axios
       .get(

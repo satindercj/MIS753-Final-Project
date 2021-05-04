@@ -21,12 +21,12 @@
 .right-side-content .stock-info {
   display: flex;
   justify-content: space-around;
-  padding-right: 1rem;
+  padding: 1rem 1rem 0 0;
 }
 
 .right-side-content .stock-info .stock-name h2 {
   font-weight: 700;
-  margin: 0.4rem 1rem 0 0;
+  margin: 0.4rem 1.5rem 0 0;
   color: #0994d4;
 }
 
@@ -69,17 +69,28 @@
   padding-top: 0.35rem;
 }
 
-.right-side-content .search-form {
+.right-side-content .search {
+  display: flex;
+  align-items: center;
+}
+
+.right-side-content .search .search-form {
   min-width: 18.75rem;
   max-width: 31.25rem;
 }
 
-.right-side-content .search-form .search {
+.right-side-content .search .search-form .search-form-field {
   width: 100%;
+  border: none;
+  border-bottom: 0.01rem solid;
 }
 
 .content {
   margin-top: 1.875rem;
+}
+
+.container {
+  max-width: 85rem;
 }
 
 .body-title h5 {
@@ -160,7 +171,7 @@
 }
 
 .stock-info-card .stock-data .date h3 {
-  color: #ff5c00;
+  color: #f38819;
   font-size: 1.75rem;
   font-weight: 700;
 }
@@ -231,117 +242,83 @@
   font-weight: 700;
 }
 
+.historical-data-card .subtitle h3 {
+  color: #969292;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
 .historical-data-card .past-values {
   margin-top: 1rem;
 }
 
-.historical-data-card .past-values .info {
-  overflow: auto;
+.historical-data-card .past-values .past-values-container {
   display: flex;
   justify-content: space-between;
-  padding-top: 1.25rem;
-  border-bottom: solid 0.000625rem grey;
-  border-radius: 0.15rem;
-
+  align-items: center;
+  padding: 1.5rem 1.5rem 0;
   cursor: pointer;
+  border-radius: 0.35rem;
+  border: 0.001rem solid #969292;
+  margin: 0.5rem;
 
   background-position: center;
   transition: background 0.8s;
 }
 
-.historical-data-card .past-values .info:hover {
+.historical-data-card .past-values .past-values-container:hover {
   background: #8080801a radial-gradient(circle, transparent 1%, #8080801a 1%)
     center/15000%;
 }
 
-.historical-data-card .past-values .info:active {
+.historical-data-card .past-values .past-values-container:active {
   background-color: #8080801a;
   background-size: 100%;
   transition: background 0s;
 }
 
-/*Older CSS*/
-
-.content .displayInfo {
-  height: 31.25rem;
-  width: 43.75rem;
-  padding: 1.25rem;
-  margin-right: 1.25rem;
+.past-values-container .title h3 {
+  font-weight: 700;
+  color: #f38819;
+  font-size: 1.5rem;
 }
 
-.content .displayInfo .title {
+.past-values-container .past-value-body {
+  width: 50%;
+}
+
+.past-values-container .past-value-body .past-value-item {
   display: flex;
   justify-content: space-between;
 }
 
-.content .displayInfo .title .mat-display-3 {
-  margin-bottom: 0;
-  color: #0994d4;
+.past-values-container .past-value-body .past-value-item .subtitle {
+  color: #969292;
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
-.content .displayInfo .title .mat-display-1 {
-  margin-bottom: 0;
-  color: #5d5b5b;
+.past-values-container .past-value-body .past-value-item .value {
+  font-size: 1rem;
+  font-weight: 700;
 }
 
-.content .displayInfo .subtitle.mat-display-1 {
-  text-align: center;
-  margin-bottom: 0;
-  color: #5d5b5b;
-}
-
-.content .displayInfo .content-body {
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-}
-
-.content .displayInfo .content-body .content-text {
-  font-size: 1.125rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.content .sideMenu {
-  height: 31.25rem;
-  width: 31.25rem;
-}
-
-.content .sideMenu .title .mat-display-1 {
-  color: #5d5b5b;
-  margin-bottom: 0.625rem;
-  text-align: center;
-}
-
-.content .sideMenu .values {
-  height: 43.75rem;
-  overflow: auto;
-}
-
-.content .sideMenu .values .info {
-  overflow: auto;
+.past-values-container .past-value-body .past-value-item .value-percentage {
   display: flex;
-  justify-content: space-around;
-  padding-top: 1.25rem;
-  border-bottom: solid 0.000625rem grey;
-
-  cursor: pointer;
-
-  background-position: center;
-  transition: background 0.8s;
+  justify-content: space-between;
 }
 
-.content .sideMenu .values .info:hover {
-  background: #8080801a radial-gradient(circle, transparent 1%, #8080801a 1%)
-    center/15000%;
+.past-values-container
+  .past-value-body
+  .past-value-item
+  .value-percentage
+  .percent-change-image {
+  height: 1.15rem;
 }
 
-.content .sideMenu .values .info:active {
-  background-color: #8080801a;
-  background-size: 100%;
-  transition: background 0s;
-}
+.past-values-container .past-value-body .past-value-item .value-percentage p {
+  font-size: 0.75rem;
+  font-weight: 800;
 
-.content .sideMenu .values .info .title {
-  color: #0994d4;
+  padding-left: 0.3rem;
 }

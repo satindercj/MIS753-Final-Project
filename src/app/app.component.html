@@ -1,11 +1,11 @@
 <div class="toolbar">
   <div class="logo">
-    <h1 class="title">{{ pageTitle }}</h1>
+    <img src="../assets/pics/logo.png" class="logo-image" />
   </div>
 
   <div class="right-side-content">
     <div class="stock-info">
-      <div class="stock-name"><h2>{{ this.metaData['2. Symbol'] }}</h2></div>
+      <div class="stock-name"><h2>{{ metaData['2. Symbol'] }}</h2></div>
       <div class="stock-value">
         <p>$</p>
         <div class="end-of-day-info">
@@ -50,14 +50,14 @@
 
 <div class="content container">
   <div class="row">
-    <div class="col">
+    <div class="col-lg-6 col-md-12">
       <div class="body-title">
         <h5>Stock Market Statistics</h5>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-6">
+    <div class="col-lg-6 d-none d-lg-block">
       <div class="graph-card">
         <apx-chart
           [series]="series"
@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <div class="col-6">
+    <div class="col-lg-6 col-md-12">
       <div class="stock-info-card">
         <div class="title">
           <h1>
@@ -82,7 +82,7 @@
           </h1>
         </div>
         <div class="subtitle">
-          <h3>{{ this.metaData['2. Symbol'] }}</h3>
+          <h3>{{ stockTitle }}</h3>
         </div>
         <div class="stock-data">
           <div class="stock-info">
@@ -170,6 +170,23 @@
       </div>
     </div>
 
+    <div class="col-md-12 d-lg-none">
+      <div class="graph-card">
+        <apx-chart
+          [series]="series"
+          [chart]="chart"
+          [dataLabels]="dataLabels"
+          [markers]="markers"
+          [title]="title"
+          [fill]="fill"
+          [yaxis]="yaxis"
+          [xaxis]="xaxis"
+          [tooltip]="tooltip"
+          [autoUpdateSeries]="true"
+        ></apx-chart>
+      </div>
+    </div>
+
     <div class="col">
       <div class="historical-data-card">
         <div class="title">
@@ -185,7 +202,7 @@
         <div class="past-values">
           <div class="row justify-content-center">
             <div
-              class="past-values-container col-5"
+              class="past-values-container col-lg-5 col-md-8"
               *ngFor="let historicalDay of sideMenuData"
               (click)="updateInfo(historicalDay)"
             >

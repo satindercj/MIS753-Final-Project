@@ -6,11 +6,12 @@
   align-items: center;
 }
 
-.toolbar .title {
-  font-size: 1.65rem;
-  font-weight: 600;
-  color: #02a373;
+.toolbar .logo {
   padding: 0rem 1rem 0rem 4.5rem;
+}
+
+.toolbar .logo .logo-image {
+  width: 10rem;
 }
 
 .toolbar .right-side-content {
@@ -25,6 +26,7 @@
 }
 
 .right-side-content .stock-info .stock-name h2 {
+  font-size: 2.5rem;
   font-weight: 700;
   margin: 0.4rem 1.5rem 0 0;
   color: #0994d4;
@@ -42,16 +44,16 @@
 }
 
 .right-side-content .stock-info .stock-value .end-of-day-info h3 {
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0;
   margin-left: 0.15rem;
 }
 
 .right-side-content .stock-info .stock-value .end-of-day-info p {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: #969292;
-  margin-top: -0.2rem;
 }
 
 .right-side-content .stock-info .stock-percent-change {
@@ -59,12 +61,12 @@
 }
 
 .right-side-content .stock-info .stock-percent-change .percent-change-image {
-  height: 1.35rem;
-  margin-top: 0.35rem;
+  height: 1.45rem;
+  margin-top: 0.1rem;
 }
 
 .right-side-content .stock-info .stock-percent-change p {
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   font-weight: 800;
   padding-top: 0.35rem;
 }
@@ -77,12 +79,14 @@
 .right-side-content .search .search-form {
   min-width: 18.75rem;
   max-width: 31.25rem;
+  padding-right: 1rem;
+  margin-left: 1rem;
 }
 
 .right-side-content .search .search-form .search-form-field {
   width: 100%;
-  border: none;
-  border-bottom: 0.01rem solid;
+
+  font-size: 1.15rem;
 }
 
 .content {
@@ -115,10 +119,13 @@
   font-weight: 700;
 }
 
+.stock-info-card .subtitle {
+  margin: 1.5rem 0 2.5em;
+}
+
 .stock-info-card .subtitle h3 {
   color: #969292;
-  margin-top: 0.75rem;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
 }
 
@@ -139,11 +146,13 @@
 }
 
 .stock-info-card .stock-data .stock-info .stock-value p {
+  font-size: 1.2rem;
   font-weight: 600;
   padding-top: 0.15rem;
 }
 
 .stock-info-card .stock-data .stock-info .stock-value h3 {
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0;
   margin-left: 0.15rem;
@@ -159,14 +168,14 @@
   .stock-info
   .stock-percent-change
   .percent-change-image {
-  height: 1.15rem;
-  margin-top: 0.45rem;
+  height: 1.5rem;
+  margin-top: 0.15rem;
 }
 
 .stock-info-card .stock-data .stock-info .stock-percent-change p {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 800;
-  padding-top: 0.45rem;
+  padding-top: 0.35rem;
   padding-left: 0.3rem;
 }
 
@@ -198,26 +207,27 @@
 
 .stock-info-content .content-value p {
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .stock-info-content .content-value h5 {
   font-weight: 700;
   margin-bottom: 0;
   margin-left: 0.15rem;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 .stock-info-content .content-value-trade-period-item {
   display: flex;
   justify-content: space-between;
+  min-width: 7rem;
 }
 
 .stock-info-content .content-value-trade-period-item .content-value-subtitle p {
   font-size: 0.85rem;
   font-weight: 700;
   color: #969292;
-  margin: 0.15rem 0.25rem 0 0;
+  margin: 0 0.25rem 0 0;
 }
 
 .stock-info-content .content-value-volume h5 {
@@ -244,7 +254,7 @@
 
 .historical-data-card .subtitle h3 {
   color: #969292;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 700;
 }
 

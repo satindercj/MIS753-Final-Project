@@ -111,7 +111,6 @@ export class AppComponent {
         `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=AAPL&outputsize=compact&apikey=${this.api_key}`
       )
       .then(async (res) => {
-        console.log(res);
         this.metaData = res.data["Meta Data"];
         this.timeSeriesData = res.data["Time Series (Daily)"];
 

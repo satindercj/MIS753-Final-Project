@@ -4,44 +4,48 @@
   </div>
 
   <div class="right-side-content">
-    <div class="stock-info">
-      <div class="stock-name"><h2>{{ metaData['2. Symbol'] }}</h2></div>
-      <div class="stock-value">
-        <p>$</p>
-        <div class="end-of-day-info">
-          <h3>{{ currentDayInfo.close | number: '1.2-2' }}</h3>
-          <p>EOD Price</p>
+    <div class="d-none d-md-block">
+      <div class="stock-info">
+        <div class="stock-name"><h2>{{ metaData['2. Symbol'] }}</h2></div>
+        <div class="stock-value">
+          <p>$</p>
+          <div class="end-of-day-info">
+            <h3>{{ currentDayInfo.close | number: '1.2-2' }}</h3>
+            <p>EOD Price</p>
+          </div>
         </div>
-      </div>
-      <div class="stock-percent-change">
-        <img src="{{percentChangeImage}}" class="percent-change-image" />
-        <p [style.color]="percentColor">
-          {{ percentChange | number: '1.2-2' }}%
-        </p>
+        <div class="stock-percent-change">
+          <img src="{{percentChangeImage}}" class="percent-change-image" />
+          <p [style.color]="percentColor">
+            {{ percentChange | number: '1.2-2' }}%
+          </p>
+        </div>
       </div>
     </div>
     <div class="search">
-      <form class="search-form">
-        <mat-form-field class="search-form-field">
-          <mat-label>Search Stock or Company</mat-label>
-          <input
-            type="text"
-            matInput
-            (keyup.enter)="getSearchData($event.target.value)"
-            [formControl]="myControl"
-            [matAutocomplete]="auto"
-          />
-          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-            <mat-option
-              *ngFor="let option of filteredOptions | async"
-              [value]="option"
-              (click)="getSearchData($event.target.textContent)"
-            >
-              {{ option }}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-      </form>
+      <div class="d-none d-sm-block">
+        <form class="search-form">
+          <mat-form-field class="search-form-field">
+            <mat-label>Search Stock or Company</mat-label>
+            <input
+              type="text"
+              matInput
+              (keyup.enter)="getSearchData($event.target.value)"
+              [formControl]="myControl"
+              [matAutocomplete]="auto"
+            />
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+              <mat-option
+                *ngFor="let option of filteredOptions | async"
+                [value]="option"
+                (click)="getSearchData($event.target.textContent)"
+              >
+                {{ option }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      </div>
     </div>
   </div>
 </div>
